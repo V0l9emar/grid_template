@@ -1,0 +1,237 @@
+:root {
+	--blue: #2096da;
+	--silver: #c5c5c5;
+	--gray: #7f7c7c;
+}
+body {
+	user-select: none;
+}
+.container {
+	max-width: 960px;
+	margin: auto;
+	display: grid;
+}
+.c1 {
+	grid-template-areas: 'i' 'l' 'm';
+	text-align: center;
+}
+#logo {
+	grid-area: l;
+	background: var(--blue);
+	padding: 35px 15px;
+}
+#info {
+	grid-area: i;
+	color: var(--gray);
+	margin-top: 5px;
+	font: italic 1em "Myriad Pro";
+}
+#info i {
+	margin-left: 5px;
+	cursor: pointer;
+}
+#info i:hover {
+	color: var(--blue);
+}
+#menu {
+	grid-area: m;
+	color: white;
+}
+#menu li {
+	padding: 9px;
+	cursor: pointer;
+}
+#menu li:hover {
+	background: var(--blue);
+}
+#header {
+	background: #1b1b1b;
+	border-bottom: 5px solid var(--blue);
+}
+#main {
+	  background: url('img/bg1.jpg') bottom repeat-x,
+				  url('img/bg2.jpg');
+}
+.c2 {
+	padding: 45px 0;
+	grid-gap: 15px;
+}
+
+.c2 div {
+	text-align: center;
+}
+.ft {
+	font: italic 1.5em "Georgia";
+	line-height: 30px;
+	color: #777;
+	text-align: center;
+	padding: 50px 30px;
+	background: url('img/f1.jpg') center top/cover no-repeat;
+}
+.icons {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	align-content: space-around;
+}
+
+.icons > div {
+	width: 100px;
+	background-color: rgba(32, 32, 34, 0.8);
+	text-align: center;
+	padding: 20px;
+	border-radius: 100px;
+	cursor: pointer;
+}
+.icons > div:hover {
+	background: var(--blue);
+}
+.icons i {
+	color: #777;
+}
+.foot {
+	display: grid;
+	margin-left: 24%;
+}
+.foot > div {
+	width: 272px;
+	height: 220px;
+	border-top: 2px solid #313133;
+	margin: 30px 0;
+}
+.txt {
+	margin: -15px 40px;
+}
+.foot h2 {
+	font: normal 1.25em Tahoma;
+	color: #c5c5c5;
+	font-weight: 400;
+	background: #000;
+	line-height: 30px;
+	text-align: center;
+}
+#box1 {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-between;
+	grid-gap: 2px;
+	margin-top: 30px;
+}
+#box2 {
+	display: grid;
+	grid-template-columns: 100px auto;
+	justify-content: space-between;
+	grid-gap: 2px;
+	margin-top: 30px;
+}
+#box2 h3 {
+	font: normal 1em "Myriad Pro";
+	line-height: 20px;
+	color: #c5c5c5;
+	font-weight: 400;
+}
+#box2 p {
+	font: normal .8em "Myriad Pro";
+	color: #777;
+	font-weight: 400;
+	margin-top: 10px;
+}
+#box2 i {
+	padding: 0 10px 0 0;
+}
+#form {
+	margin-top: 20px;
+}
+#box1 img, #box2 img {
+	border: 4px solid #262627;
+}
+input {
+	font: italic 1em "Myriad Pro";
+	letter-spacing: 0px;
+	line-height: 30px;
+	color: #c3c2c2;
+	font-weight: 400;
+	background: #262627;
+	border: none;
+	padding: 5px;
+	margin-top: 10px ;
+	width: 100%;
+}
+button {
+	font-size: normal 1em "Myriad Pro";
+	line-height: 14px;
+	color: #fff;
+	font-weight: 400;
+	box-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+	background: #262627;
+	border: none;
+	padding: 15px;
+	margin: 25px 0;
+	cursor: pointer;
+}
+
+#footer {
+	background: var(--blue);
+	padding: 10px 0;
+}
+.c3 {
+	font: normal 1em "Myriad Pro";
+	letter-spacing: 0px;
+	color: #fff;
+	font-weight: 400;
+}
+.c3 p {
+	font: normal .75em "Myriad Pro";
+	color: #fff;
+	font-weight: 400;
+	text-align: center;
+	padding-top: 20px;
+}
+#sm {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	justify-content: space-around;
+	grid-gap: 10px;
+	cursor: pointer;
+}
+#sm > div:hover {
+	color: #1a1a1c;
+}
+
+@media only screen and (min-width: 960px) {
+	.c1 { 
+		grid-template-areas: 'l i' 'l m'; 
+		grid-template-rows: auto 30px; 
+		justify-content: space-between;
+	}
+	#menu li { 
+		display: inline-block;
+		align-content: space-between
+	}
+	.c2 {
+		grid-template-columns: auto auto auto auto;
+	}
+	.rows {
+		grid-row: span 2;
+	}
+	.cols {
+		grid-column: span 2;
+	}
+		.icons {
+		display: grid;
+		grid-template-columns: auto auto auto auto auto auto auto;
+		justify-content: space-between;
+	}
+	.foot {
+		display: grid;
+		grid-template-columns: auto auto auto;
+		justify-content: space-between;
+		margin: auto;
+	}
+	.c3 {
+		grid-template-columns: auto auto;
+		justify-content: space-between;
+	}
+	.c3 p {
+		padding-top: 0;
+	}
+}
